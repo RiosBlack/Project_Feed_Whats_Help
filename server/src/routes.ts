@@ -22,11 +22,11 @@ routes.post('/feedbacks', async (req, res) => {
     const { type, comment, screenshot } = req.body;
 
     const prismaFeedbacksRepository = new PrismaFeedbackRepository();
-    const SubmitFeedbackUseCase = new SubmitFeedbackUseCase(
+    const submitFeedbackUseCase = new SubmitFeedbackUseCase(
         prismaFeedbacksRepository
     );
 
-    await SubmitFeedbackUseCase.execute({
+    await submitFeedbackUseCase.execute({
         type,
         comment,
         screenshot,

@@ -1,11 +1,11 @@
-import { feedbackType, feedbackTypes } from '../WidgetForm';
+import { FeedbackType, feedbackTypes } from '../WidgetForm';
 import CloseButton from '../CloseButton';
 import { ArrowLeft } from 'phosphor-react';
 import ScreenShotButton from '../WidgetForm/ScreenShotButton';
 import { FormEvent, useState } from 'react';
 
 interface FeedbackContentStepProps {
-    feedbackType: feedbackType;
+    feedbackType: FeedbackType;
     onFeedbackRestartRequested: () => void;
     onFeedbackSent: () => void;
 }
