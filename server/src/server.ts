@@ -1,8 +1,16 @@
 import { routes } from './routes';
 import express from 'express';
+import { cors } from 'cors';
 
 //iniciando o servidor com o express
 const app = express();
+
+//para fazer um controle de quais os frontend pode acessar o backend
+app.use(
+    cors({
+        origin: 'https://localhost:3000',
+    })
+);
 
 app.use(express.json());
 //importando as rotas
