@@ -6,11 +6,7 @@ import { cors } from 'cors';
 const app = express();
 
 //para fazer um controle de quais os frontend pode acessar o backend
-app.use(
-    cors({
-        origin: 'https://localhost:3000',
-    })
-);
+app.use(cors());
 
 app.use(express.json());
 //importando as rotas
