@@ -13,6 +13,6 @@ app.use(express.json());
 app.use(routes);
 
 //chamando a porta e passando uma função para executar assim que liberar a porta.
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3333, () => {
     console.log('Servidor iniciado com sucesso');
 });
